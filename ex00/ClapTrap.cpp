@@ -7,6 +7,7 @@ ClapTrap::ClapTrap()
 	this->_energy_points = 10;
 	this->_attack_damage = 0;
 	std::cout << "Default constructor called without args" << std::endl;
+	std::cout << "Claptrap " <<this->_name <<" creado" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
@@ -16,12 +17,14 @@ ClapTrap::ClapTrap(std::string name)
 	this->_energy_points = 10;
 	this->_attack_damage = 0;
 	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Claptrap " <<this->_name <<" creado" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &clap)
 {
 	*this = clap;
 	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Claptrap " <<this->_name <<" creado" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &clap)
@@ -39,7 +42,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &clap)
 
 ClapTrap::~ClapTrap()
 {
-		std::cout << "Destructor called" << std::endl;
+		std::cout << "Destructor called " << this->_name << std::endl;
 }
 
 void	ClapTrap::attack(const std::string &target)
