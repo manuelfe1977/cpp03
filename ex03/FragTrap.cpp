@@ -12,9 +12,9 @@ FragTrap::FragTrap() : ClapTrap()
 FragTrap::FragTrap(std::string name):ClapTrap(name)
 {
 	this->_hit_points = 100;
-	this->_energy_points = 100;
-	this->_attack_damage= 30;
-	std::cout << "FragTrap string constructor called" << std::endl;
+	this->_energy_points = 50;
+	this->_attack_damage= 20;
+	std::cout << "FragTrap default constructor called" << std::endl;
 	std::cout << "FragTrap " <<this->_name <<" creado" << std::endl;
 }
 
@@ -39,7 +39,7 @@ void	FragTrap::attack(const std::string &target)
 	if (this->_energy_points > 0 && this->_hit_points > 0)
 	{
 		this->_energy_points--;
-		std::cout << "FragTrap "<<this->_name <<" attacks " <<target<<" causing " << this->_attack_damage << " points of damage!"<< std::endl;
+		std::cout << "FragTrap "<<this->_name <<" attacks " <<target<<" causing " << DAMAGE_POINTS << " points of damage!"<< std::endl;
 	}
 	else
 		std::cout << "FragTrap "<<this->_name <<" has no hit points or energy " <<std::endl;
@@ -54,3 +54,4 @@ void	FragTrap::highFivesGuys()
 	else
 		std::cout << "FragTrap "<<this->_name <<" has no hit points or energy " <<std::endl;
 }
+

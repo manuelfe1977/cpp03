@@ -14,7 +14,7 @@ ScavTrap::ScavTrap(std::string name):ClapTrap(name)
 	this->_hit_points = 100;
 	this->_energy_points = 50;
 	this->_attack_damage= 20;
-	std::cout << "ScavTrap string constructor called" << std::endl;
+	std::cout << "ScavTrap default constructor called" << std::endl;
 	std::cout << "ScavTrap " <<this->_name <<" creado" << std::endl;
 }
 
@@ -39,7 +39,7 @@ void	ScavTrap::attack(const std::string &target)
 	if (this->_energy_points > 0 && this->_hit_points > 0)
 	{
 		this->_energy_points--;
-		std::cout << "ScavTrap "<<this->_name <<" attacks " <<target<<" causing " << this->_attack_damage << " points of damage!"<< std::endl;
+		std::cout << "ScavTrap "<<this->_name <<" attacks " <<target<<" causing " << DAMAGE_POINTS << " points of damage!"<< std::endl;
 	}
 	else
 		std::cout << "ScavTrap "<<this->_name <<" has no hit points or energy " <<std::endl;
@@ -54,3 +54,4 @@ void	ScavTrap::guardGate()
 	else
 		std::cout << "ScavTrap "<<this->_name <<" has no hit points or energy " <<std::endl;
 }
+
